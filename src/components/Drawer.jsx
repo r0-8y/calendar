@@ -60,8 +60,13 @@ function ResponsiveDrawer(props) {
           aria-label="log out"
           edge="start"
           onClick={props.onLogout}
+          className="logout"
+          sx={{
+            borderRadius: "0px",
+            boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;",
+          }}
         >
-          <LogoutIcon />
+          <LogoutIcon sx={{ marginRight: "10px" }} />
           Sign out
         </IconButton>
       ) : null}
@@ -116,7 +121,12 @@ function ResponsiveDrawer(props) {
         </AppBar>
         <Box
           component="nav"
-          sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 0 } }}
+          sx={{
+            width: { sm: drawerWidth },
+            flexShrink: { sm: 0 },
+            boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;",
+            borderWidth: "0px",
+          }}
           aria-label="mailbox folders"
         >
           {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
@@ -134,6 +144,7 @@ function ResponsiveDrawer(props) {
                 boxSizing: "border-box",
                 width: drawerWidth,
               },
+              boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;",
             }}
           >
             {drawer}

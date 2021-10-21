@@ -20,9 +20,10 @@
 .toolbar {
   display: flex;
   height: 5vh;
-  border-bottom: lightgray;
+  /* border-bottom: lightgray;
   border-width: 1px;
-  border-style: solid;
+  border-style: solid; */
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   align-items: center;
 }
 
