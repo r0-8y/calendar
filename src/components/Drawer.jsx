@@ -39,7 +39,6 @@ function ResponsiveDrawer(props) {
 
   useEffect(() => {
     ApiCalendar.onLoad(() => setUser(ApiCalendar.getBasicUserProfile()));
-    console.log("User fetched");
   }, []);
 
   const drawer = (

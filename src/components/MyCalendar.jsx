@@ -54,7 +54,6 @@ function MyCalendar(props) {
   };
 
   useEffect(() => {
-    console.log("Im in useEffect");
     if (events.length === 0 || added) {
       if (!added) {
         ApiCalendar.onLoad(() => {
@@ -74,7 +73,6 @@ function MyCalendar(props) {
                 });
               });
               setEvents(newEvents);
-              console.log("Events fetched");
             })
             .catch((e) => console.log(e));
         });
