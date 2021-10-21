@@ -8,7 +8,8 @@ import Grid from "@mui/material/Grid";
 import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import Typography from "@mui/material/Typography";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-import { GoogleLogin } from "react-google-login";
+import ApiCalendar from "react-google-calendar-api";
+import GoogleButton from "react-google-button";
 
 function Copyright(props) {
   return (
@@ -31,13 +32,15 @@ function Copyright(props) {
 const theme = createTheme();
 
 export default function Login(props) {
-  const onLoginSuccess = (res) => {
-    console.log("Login success:", res.profileObj);
-    props.history.push("/home");
-  };
-
-  const onLoginFailure = (res) => {
-    console.log("Login failed:", res);
+  const handleLogin = () => {
+    // if the user is already signed in and remembered, then push home instantly
+    if (ApiCalendar.sign) {
+      props.history.push("/home");
+      // else listen when the sign in process is done and then push home
+    } else {
+      ApiCalendar.handleAuthClick();
+      ApiCalendar.listenSign(() => props.history.push("/home"));
+    }
   };
 
   return (
@@ -90,17 +93,9 @@ export default function Login(props) {
             <Typography component="h1" variant="h5" marginBottom={2}>
               Welcome to Calendar
             </Typography>
-            <GoogleLogin
-              theme="dark"
-              clientId={
-                "390134338599-978f08a9kc3j10uvnk2e1ns40k8p676i.apps.googleusercontent.com"
-              }
-              buttonText="Sign in with Google"
-              onSuccess={onLoginSuccess}
-              onFailure={onLoginFailure}
-              cookiePolicy={"single_host_origin"}
-            />
-            <Copyright sx={{ mt: 5 }} />
+            <GoogleButton onClick={() => handleLogin()} />
+
+            <Copyright sx={{ mt: 3 }} />
           </Box>
         </Grid>
       </Grid>

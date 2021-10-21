@@ -1,8 +1,8 @@
 {
-    "clientId": "390134338599-978f08a9kc3j10uvnk2e1ns40k8p676i.apps.googleusercontent.com",
-    "apiKey": "AIzaSyBdfWsPItCjQ7LbXnVAO-jLqrGvtt5czyU",
-    "scope": "https://www.googleapis.com/auth/calendar",
-    "discoveryDocs": [
-      "https://www.googleapis.com/discovery/v1/apis/calendar/v3/rest"
-    ]
-  }
+  "clientId": "390134338599-im19jp7iu8fcjpm8l553k34956fcggnu.apps.googleusercontent.com",
+  "apiKey": "AIzaSyAL1e2gHjpJjSYseiTmqLN_k2JcsWj4isM",
+  "scope": "https://www.googleapis.com/auth/calendar",
+  "discoveryDocs": [
+    "https://www.googleapis.com/discovery/v1/apis/calendar/v3/rest"
+  ]
+}
