@@ -1,32 +1,38 @@
 # Getting Started with Calendar
 
-## Available Scripts
+## Build and run project
 
-In the project directory, you can run:
+Too build and run projct follow the next 4 simple steps:
 
-### `npm install`
-
-Installs all the important npm packages that you need to run this app.
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- clone the project and navigate to project directory
+- `npm install` (_install all of the importat npm packages_)
+- `npm start` (_run the app in the development mode_)
+- open [localhost:3000](http://localhost:3000) (_to view it in the browser_)
 
 ## Usage
 
-On the first page you sign in with your Google account.
+On the first page:
 
-On the homepage you can see all your upcoming events.
+- you sign in with your Google account.
 
-You can show a day, a week or a month of events and navigate forwards or backwards.
+On the homepage:
+
+- see all your upcoming events
+- show a day, a week or a month of events and navigate forwards or backwards.
+- [add events](#add-event)
+- [delete events](#delete-event)
 
 ## Add Event
 
-To add an event simply select as many calendar slots as you want.
-In the header you can see the start and the end of your event.
-Click the plus button and write a summary, then confirm.
+To add an event:
+
+- select as many calendar slots as you want
+  - _in the header you can see the start and the end of your event_
+- click the plus button
+- write a summary and confirm
 
 ## Delete Event
 
-To delete an event just click on the event in the calendar and confirm.
+To delete an event:
+
+- click on the event in the calendar and confirm
